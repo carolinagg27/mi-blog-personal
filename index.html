@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #d20e7a;
+            color: rgb(6, 1, 1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #c20ed2;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #dd298c;
+            padding: 10px 0;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #inicio,
+        #perfil {
+            display: none;
+        }
+
+        #inicio.active,
+        #perfil.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        body {
+            background-color: rgba(153, 70, 149, 0.589);
+        }
+    </style>
+</head>
+
+<body>gv
+    <nav>
+        <ul>
+            <li><a href="#inicio" onclick="showSection('inicio')">Inicio</a></li>
+            <li><a href="#">Entradas</a>
+                <ul>
+                    <li><a href="#perfil" onclick="showSection('perfil')">Perfil</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="active">
+        <center>
+            <h1>Ada lovace </h1>
+        </center>
+
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <img src="img/ada.webp" alt="Descripción de la imagen" width="300" height="450">
+                </td>
+            </tr>
+        </table>
+
+        <p>En este blog comparto mis pensamientos, ideas y experiencias sobre diferentes
+            temas que me apasionan. ¡Espero que disfrutes de la lectura!</p>
+        <li align="center">EL MUNDO NO ES COLOR DE ROSA </li>
+        <p>Ada Lovelace desempeñó un papel significativo en el empoderamiento femenino, aunque su impacto no siempre se
+            ha reconocido de inmediato. Aquí te detallo algunas formas en que su vida y trabajo contribuyeron a este
+            objetivo:</li>
+            Lovelace ha llegado a simbolizar el empoderamiento femenino en la tecnología, inspirando eventos y programas
+            educativos destinados a fomentar la participación de las mujeres en programación y ciencias de la
+            computación. Su figura es utilizada como un emblema de lo que las mujeres pueden lograr en estos campos.
+        <p>Lovelace es reconocida por su visión de la máquina analítica no solo como una calculadora, sino como un
+            dispositivo capaz de realizar cualquier tipo de cálculo que pudiera ser descrito mediante instrucciones.
+            Escribió notas extensas sobre la máquina, y en estas notas, describió un algoritmo para calcular los números
+            de Bernoulli, que se considera el primer algoritmo destinado a ser procesado por una máquina. Por esto, se
+            le atribuye el título de la primera programadora de computadoras.</p>
+    </section>
+    
+    
+
+    <section id="perfil">
+
+
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <img src="img/perfil.webp" alt="Descripción de la imagen" width="300" height="400">
+                </td>
+            </tr>
+        </table>
+
+        
+        <h1>Perfil</h1>
+        <p>Aquí encontrarás mis opiniones personales sobre diversos temas, desde tecnología
+            hasta vida diaria. Este es un espacio donde expreso libremente mis puntos de vista.</p>
+        <li>Cada semana veras reflejado nuevo contenido asociado al mundo de la programacion, no te olvides seguirme
+            para ver mi contenido!</li>
+        <h1>Biografia</h1>
+        <p>¡Hola! Soy Carolina García Gallego, tengo 24 años y mi pasión por la tecnología es el motor que impulsa mi vida. Desde una edad temprana, me he sentido fascinada por el mundo digital y sus infinitas posibilidades. Mi interés se extiende a todas las áreas relacionadas con la tecnología, desde el desarrollo de software hasta las innovaciones en dispositivos y sistemas.
+
+            A lo largo de mi carrera, he tenido la oportunidad de explorar diversos aspectos de este emocionante campo y de contribuir a proyectos que buscan hacer que la tecnología sea más accesible y eficiente. Estoy constantemente aprendiendo y actualizándome con las últimas tendencias y avances para ofrecer soluciones innovadoras y efectivas.
+            
+            Cuando no estoy inmersa en el mundo de la tecnología, disfruto explorando nuevas ideas y aplicaciones que puedan transformar nuestra manera de interactuar con el mundo digital. Mi objetivo es seguir creciendo profesionalmente y contribuir de manera significativa al desarrollo de tecnologías que mejoren nuestras vidas.
+            
+            ¡Gracias por visitar mi página web y por interesarte en mi trayectoria!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
